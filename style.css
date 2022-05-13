@@ -19,8 +19,7 @@ body {
 
 header {
   width: 37.5rem;
-  margin-right: auto;
-  margin-left: auto;
+  margin-inline: auto;
 }
 
 p {
@@ -58,6 +57,11 @@ button {
   align-items: center;
   justify-content: center;
   gap: 1.6rem;
-  margin-right: auto;
-  margin-left: auto;
+  margin-inline: auto;
+}
+
+.stats {
+  width: 32.7rem;
+  height: 47rem;
+  margin-inline: auto;
 }
