@@ -251,3 +251,12 @@ body.menu-expanded .logo path {
 body.menu-expanded button path {
   stroke: white;
 }
+
+/*========================== SERVICES ========================*/
+
+#services header h4 {
+  font-size: 1.4rem;
+  line-height: 150%;
+  letter-spacing: 0.08rem;
+  text-transform: uppercase;
+}
