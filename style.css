@@ -18,6 +18,10 @@
   font-size: 62.5%; /* 1rem = 10px */
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   width: 100%;
@@ -46,13 +50,13 @@ section {
   padding-block: 10rem;
 }
 
-/*=========================== HEADER =========================*/
+/*============================ #HOME =========================*/
 
-header {
-  margin-top: calc(4.1rem + var(--nav-height));
+#home {
+  padding-top: calc(4.1rem + var(--nav-height));
 }
 
-header::before {
+#home::before {
   content: '';
   width: 100%;
   height: calc(108rem + var(--nav-height));
@@ -64,7 +68,7 @@ header::before {
   z-index: -1;
 }
 
-header p {
+#home p {
   font-size: 1.8rem;
   line-height: 150%;
   font-weight: 400;
@@ -72,19 +76,19 @@ header p {
   margin-bottom: 3.2rem;
 }
 
-header h1 {
+#home h1 {
   font-size: 3.4rem;
   color: var(--headline);
   line-height: 130%;
   margin-bottom: 2.4rem;
 }
 
-header h4 {
+#home h4 {
   font-size: 1.4rem;
   color: var(--primary-color);
 }
 
-header button {
+#home button {
   background: var(--primary-color);
   border: none;
   border-radius: 4rem;
@@ -102,14 +106,14 @@ header button {
   margin-inline: auto;
 }
 
-header img {
+#home img {
   width: 26.4rem;
   display: block;
   margin-inline: auto;
   object-position: 0 2rem;
 }
 
-.stats {
+#home .stats {
   width: 32.7rem;
   padding-block: 4rem;
   margin-inline: auto;
@@ -121,14 +125,14 @@ header img {
   gap: 6rem;
 }
 
-.stat h3 {
+#home .stat h3 {
   font-size: 4.8rem;
   color: var(--headline);
   line-height: 130%;
   margin-bottom: 0.4rem;
 }
 
-.stat p {
+#home .stat p {
   margin: 0;
   color: var(--primary-color);
   font-size: 1.6rem;
@@ -144,6 +148,7 @@ nav {
   top: 0;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 100;
 }
 
 nav .wrapper {
@@ -193,6 +198,10 @@ body.menu-expanded .close-menu {
   visibility: visible;
 }
 
+.menu {
+  transform: translateY(100%);
+}
+
 body.menu-expanded .menu {
   position: fixed;
   top: 0;
@@ -201,6 +210,8 @@ body.menu-expanded .menu {
   width: 100vw;
   height: 100vh;
   padding-top: var(--nav-height);
+  transition: transform 300ms;
+  transform: translateY(0);
 }
 
 body.menu-expanded nav {
